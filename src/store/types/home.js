@@ -1,0 +1,1 @@
+export const VIEW_BAR = 'viewBar'
