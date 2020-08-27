@@ -16,9 +16,8 @@ function Detail(props) {
 
     //添加本地存储
     const purchase = () => {
-        var data = localStorage.getItem("data");
+        const data = JSON.parse(localStorage.getItem("data"));
         if (data) {
-            data = JSON.parse(data);
             const index = data.findIndex((item) => {
                 return item.id ===props.history.location.state.id;
             });
@@ -51,7 +50,8 @@ function Detail(props) {
         props.history.push('/order')
     }
     return (
-        detaildata ?
+        detaildata
+            ?
         <>
             <TitleWrapper>
                 <div className='detailHeader'>
@@ -69,7 +69,8 @@ function Detail(props) {
             <Send>
                 <span onClick={purchase}>立即购票</span>
             </Send>
-        </> :''
+        </>
+            :''
     );
 }
 

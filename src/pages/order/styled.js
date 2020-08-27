@@ -122,8 +122,10 @@ export const ListWrapper = styled.div`
       .rightBot{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         .price{
           color: red;
+          width: 80px;
         }
         .num{
           display: flex;
@@ -139,15 +141,21 @@ export const ListWrapper = styled.div`
             height: 20px;
           }
         }
+        .del{
+            width: 60px;
+            height: 40px;
+            background: #f03d37;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+        }
       }
     }
 `
 export const Total = styled.div`
     width: 100%;
     height: 50px;
-    //position: absolute;
-    //left: 0;
-    //bottom: 50px;
     border-top: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
