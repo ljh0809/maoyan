@@ -106,7 +106,7 @@ class City extends Component {
 
         )
     }
-
+    //城市分类
     itemList = (data)=>{
         return(
             data.map(item=> {

@@ -10,7 +10,7 @@ export const TabBar = styled.div`
     
     .underline {
         position: absolute;
-        width: 50%;
+        //width: 50%;
         left: 0;
         height: 0;
         bottom: 0;
@@ -22,7 +22,8 @@ export const TabBar = styled.div`
 `;
 
 export const TabBarItem = styled.div`
-    width: 50%; 
+    //width: 50%; 
+    flex: 1;
     font-size: 15px;
     height: 43.5px;
     line-height: 43.5px;

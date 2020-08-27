@@ -2,10 +2,9 @@ import React, {useState} from "react";
 import {TabBar,TabContent,TabBarItem} from './styled';
 import PropTypes from 'prop-types';
 function Tab (props) {
-
     const[current,setCurrent] =useState()
     //切换事件
-   const onChange=(i)=>()=>{
+   const onChange=(i) => () => {
        setCurrent(i)
     }
         return(
@@ -21,7 +20,7 @@ function Tab (props) {
                             </TabBarItem>
                         ))
                     }
-                    <div style={{left:current*50+'%'}} className="underline" />
+                    <div style={{left:current*(100/props.tabs.length)+'%',width:(100/props.tabs.length)+'%'}} className="underline" />
                 </TabBar>
                    <TabContent style={{transform:`translate3d(-${current*100}%, 0px,1px)`}}>
                         {props.children}
