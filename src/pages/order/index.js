@@ -69,10 +69,21 @@ function Order(props) {
         localStorage.setItem('data',JSON.stringify(newData))
     }
 
-        return (
+    const userOut = () => {
+        localStorage.removeItem('token')
+        props.history.push('/home')
+    }
+
+    return (
             !Boolean(newData) || !newData.length
                 ?
                 <ContentWrapper>
+                    <div className='title'>
+                        <i onClick={goBack}>
+                        </i>
+                        <span>订单</span>
+                        <div className='out' onClick={userOut}>退出登录</div>
+                    </div>
                     <div className='content'>
                         <img  src={logo} alt=""/>
                         <p>还没订单，去首页逛逛吧</p>
@@ -86,6 +97,7 @@ function Order(props) {
                         <i onClick={goBack}>
                         </i>
                         <span>订单</span>
+                        <div className='out' onClick={userOut}>退出登录</div>
                     </div>
                     <ul>
                         {
