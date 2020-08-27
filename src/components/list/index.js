@@ -13,7 +13,6 @@ const List = React.forwardRef((props, ref) => {
             const listData = [...this.props.listData]
             this.flowData(listData);
             // console.log(this.props.history)
-
         }
 
         //瀑布列表
